@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>리턴 값이 있는 함수</title>
+    <script>
+      // 리턴문
+      function fun1() {
+        var str = '1. 함수가 실행되었습니다.';
+        return str;
+      }
+      var value = fun1();
+      document.write(value);
+
+      // 매개변수 + 리턴문
+      function func2(num1, num2) {
+        return num1 + num2;
+      }
+      let result = func2(100, 200);
+      document.write(result);
+    </script>
+  </head>
+  <body></body>
+</html>

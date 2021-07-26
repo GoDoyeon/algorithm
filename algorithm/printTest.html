@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>입력값 받기</title>
+    <script>
+      // 사용자가 타이핑 할 때마다 input 값 출력하기
+      function printId() {
+        const id = document.getElementById('id').value;
+        document.getElementById('result_id').innerText = id;
+      }
+      function printName() {
+        const name = document.getElementById('name').value;
+        document.getElementById('result_name').innerHTML = name;
+      }
+    </script>
+  </head>
+  <body>
+    <h3>사용자가 타이핑 할때마다 input 값이 출력됩니다.</h3>
+    <input id="id" onkeyup="printId()" />
+    <div id="result_id"></div>
+    <br />
+    <h3>input창에 단어를 입력한 뒤 enter를 누르면 단어가 출력됩니다.</h3>
+    <input id="name" onchange="printName()" />
+    <div id="result_name"></div>
+  </body>
+</html>
