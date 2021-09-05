@@ -1,0 +1,18 @@
+<!-- [210905] 연필개수 -->
+<!-- 방법1. 12로 나눠줬을 때 0이 아니면 +1을 해준다. -->
+<!-- 방법2. Math.ceil()를 사용해준다. -->
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>출력결과</title>
+  </head>
+  <body>
+    <script>
+      function solution(n) {
+        let answer = Math.ceil(n / 12);
+        return answer;
+      }
+      console.log(solution(25));
+    </script>
+  </body>
+</html>
