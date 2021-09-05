@@ -1,0 +1,27 @@
+<!-- [210905] 삼각형 판별하기 -->
+<!-- 삼각형이 되기 위한 조건 :
+1. 짧은 막대 두 개의 길이의 합이 제일 긴 막대의 값보다 작아야 함
+2. 짧은 막대 두 개의 길이의 합이 제일 긴 막대의 값과 같으면 안됨 -->
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>출력결과</title>
+  </head>
+  <body>
+    <script>
+      function solution(a, b, c) {
+        let answer = 'YES',
+          max;
+        let sum = a + b + c;
+        if (a > b) max = a;
+        else max = b;
+        if (max < c) max = c;
+        if (max >= sum - max) answer = 'NO';
+
+        return answer;
+      }
+
+      console.log(solution(6, 6, 11));
+    </script>
+  </body>
+</html>
