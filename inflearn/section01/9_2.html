@@ -1,0 +1,21 @@
+<!-- [210906] A를 #으로 -->
+<!-- replace(), for문 사용 
+  replace(/o/g,"*") : o를 *로 전체 치환한다.
+replace(/o/gi,"*") : o를 *로 대/소문자 구분 없이 전체 치환한다. -->
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>출력결과</title>
+  </head>
+  <body>
+    <script>
+      function solution(s) {
+        let answer = s;
+        answer = answer.replace(/A/g, 'X');
+        return answer;
+      }
+      let str = 'BANANA';
+      console.log(solution(str));
+    </script>
+  </body>
+</html>
