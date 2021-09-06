@@ -1,0 +1,31 @@
+<!-- [210906] forEach -->
+
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>출력결과</title>
+  </head>
+  <body>
+    <script>
+      // forEach
+      // function forEach(predicate, thisArg) {
+      //   for(let i = 0; i < a.length; i++){
+      //     predicate(a[i], i)
+      //   }
+      // }
+      const a = [10, 11, 12, 13, 14, 15];
+      let forEachAnswer = a.forEach(
+        function (v, i) {
+          console.log(v, i, this);
+          // 10 0 (2) [1, 2]
+          // 11 1 (2) [1, 2]
+          // 12 2 (2) [1, 2]
+          // 13 3 (2) [1, 2]
+          // 14 4 (2) [1, 2]
+          // 15 5 (2) [1, 2]
+        },
+        [1, 2],
+      );
+    </script>
+  </body>
+</html>

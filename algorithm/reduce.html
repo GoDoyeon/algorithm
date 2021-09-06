@@ -1,0 +1,26 @@
+<!-- [210906] forEach, map, filter, reduce -->
+
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>출력결과</title>
+  </head>
+  <body>
+    <script>
+      // reduce
+      // 값을 생성해서 리턴 (sum 구할 때 주로 사용)
+      // function reduce(predicate, val) {
+      //   let result = val;
+      //   for (let i = 0; i < a.length; i++) {
+      // result = predicate(result, a[i]);
+      //   }
+      //   return result;
+      // }
+      const a = [10, 11, 12, 13, 14, 15];
+      let reduceAnswer = a.reduce(function (acc, v) {
+        return acc + v;
+      }, 0); // 0은 변수의 초기값
+      console.log(reduceAnswer); // 75
+    </script>
+  </body>
+</html>

@@ -1,0 +1,26 @@
+<!-- [210906] filter -->
+
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>출력결과</title>
+  </head>
+  <body>
+    <script>
+      // filter
+      // 참인 원소(원하는 원소)만 넣어서 배열 생성
+      // function filter(predicate, thisArg) {
+      //   let list = [];
+      //   for (let i = 0; i < a.length; i++) {
+      //     if (predicate(a[i], i)) list.push(a[i]);
+      //   }
+      //   return list;
+      // }
+      const a = [10, 11, 12, 13, 14, 15];
+      let filterAnswer = a.filter(function (v, i) {
+        if (v % 2 === 0) return v;
+      });
+      console.log(filterAnswer); // [10, 12, 14]
+    </script>
+  </body>
+</html>
