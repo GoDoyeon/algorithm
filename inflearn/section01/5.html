@@ -1,0 +1,25 @@
+<!-- [210906] 최솟값 구하기 -->
+<!-- min 변수에 Number.MAX_SAFE_INTEGER 상수 (JavaScript에서 안전한 최대 정수값)로 미리 초기화 한 후 비교하는 방식으로 문제 해결 -->
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>출력결과</title>
+  </head>
+  <body>
+    <script>
+      function solution(arr) {
+        let answer;
+        let min = Number.MAX_SAFE_INTEGER; // -9007199254740991
+        for (let i = 0; i < arr.length; i++) {
+          if (arr[i] < min) {
+            min = arr[i];
+          }
+        }
+        answer = min;
+        return answer;
+      }
+      const arr = [5, 7, 1, 3, 2, 9, 11];
+      console.log(solution(arr));
+    </script>
+  </body>
+</html>
