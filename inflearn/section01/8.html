@@ -1,0 +1,30 @@
+<!-- [210906] 일곱 난쟁이 -->
+<!-- 1. 9명의 난쟁이 키를 다 더해준다.
+2. for문을 돌려 두 명의 난쟁이 키를 더한다.
+3. (1) - (2) = 100 인 값을 배열에 넣어준다. -->
+
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>출력결과</title>
+  </head>
+  <body>
+    <script>
+      function solution(arr) {
+        let answer = arr;
+        let sum = arr.reduce((arr, crr) => arr + crr, 0);
+        for (let i = 0; i < arr.length; i++) {
+          for (let j = i + 1; j < arr.length + 1; j++) {
+            if (sum - (arr[i] + arr[j]) === 100) {
+              answer.splice(j, 1);
+              answer.splice(i, 1);
+            }
+          }
+        }
+        return answer;
+      }
+      let arr = [20, 7, 23, 19, 10, 15, 25, 8, 13];
+      console.log(solution(arr));
+    </script>
+  </body>
+</html>
