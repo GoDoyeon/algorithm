@@ -1,0 +1,21 @@
+<!-- [210906] 최솟값 구하기 -->
+<!-- 내장함수로 문제 해결 -->
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>출력결과</title>
+  </head>
+  <body>
+    <script>
+      function solution(arr) {
+        // 1. ...arr(spread operator)를 사용하여 arr[0], arr[1] 이런 식으로 배열을 펼쳐줍니다.
+        let answer = Math.min(...arr);
+        // 2. apply()를 사용하여 최소값 구하기
+        answer = Math.min.apply(null, arr);
+        return answer;
+      }
+      const arr = [5, 7, 1, 3, 2, 9, 11];
+      console.log(solution(arr));
+    </script>
+  </body>
+</html>
