@@ -1,0 +1,27 @@
+<!-- [210907] 등수 구하기 -->
+<!-- Array.from() 메서드는 유사 배열 객체나 반복 가능한 객체를 얕게 복사해 새로운 Array 객체를 만듭니다. -->
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>출력결과</title>
+  </head>
+  <body>
+    <script>
+      function solution(arr) {
+        let n = arr.length;
+        let answer = Array.from({ length: n }, () => 1);
+        for (let i = 0; i < n; i++) {
+          for (let j = 0; j < n; j++) {
+            if (arr[i] < arr[j]) {
+              answer[i]++;
+            }
+          }
+        }
+        return answer;
+      }
+
+      let arr = [87, 89, 92, 100, 76];
+      console.log(solution(arr));
+    </script>
+  </body>
+</html>
