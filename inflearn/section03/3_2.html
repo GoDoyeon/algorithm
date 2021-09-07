@@ -1,0 +1,22 @@
+<!-- [210908] 숫자만 추출 -->
+<!-- isNaN 사용, parseInt 사용 안함 -->
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>출력결과</title>
+  </head>
+  <body>
+    <script>
+      function solution(str) {
+        let answer = '';
+        for (let x of str) {
+          if (!isNaN(x)) answer = answer * 10 + Number(x);
+        }
+        return answer;
+      }
+
+      let str = 'g0en2T0s8eS2of4t';
+      console.log(solution(str));
+    </script>
+  </body>
+</html>

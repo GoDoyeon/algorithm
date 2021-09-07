@@ -1,0 +1,21 @@
+<!-- [210908] 숫자만 추출 -->
+<!-- 정규식 사용 -->
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>출력결과</title>
+  </head>
+  <body>
+    <script>
+      function solution(str) {
+        let answer = '';
+        let number = /[^0-9]/g; // 숫자가 아닌 문자열을 선택하는 정규식
+        answer = str.replace(number, '');
+        return parseInt(answer);
+      }
+
+      let str = 'g0en2T0s8eSoft';
+      console.log(solution(str));
+    </script>
+  </body>
+</html>
