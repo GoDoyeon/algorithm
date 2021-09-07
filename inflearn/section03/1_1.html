@@ -1,0 +1,22 @@
+<!-- [210907] 회문문자열 -->
+<!-- split(), reverse(), join()사용 -->
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>출력결과</title>
+  </head>
+  <body>
+    <script>
+      function solution(s) {
+        let answer = 'YES';
+        s = s.toUpperCase();
+        if (s.split('').reverse().join('') !== s) {
+          return 'NO';
+        }
+        return answer;
+      }
+      let str = 'gosdoG';
+      console.log(solution(str));
+    </script>
+  </body>
+</html>
