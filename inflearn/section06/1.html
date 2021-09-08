@@ -1,0 +1,32 @@
+<!-- [210908] 올바른 괄호 -->
+<!-- 스택에 괄호를 push 하다가 ')' 닫는 괄호를 만나면 pop하기 -->
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>출력결과</title>
+  </head>
+  <body>
+    <script>
+      function solution(s) {
+        let answer = 'YES';
+        let stack = [];
+        for (let x of s) {
+          // '('(여는 괄호)를 넣으면 push
+          if (x === '(') stack.push(x);
+          else {
+            // ')'(닫는 괄호)를 넣었는데 짝이 없으면
+            if (stack.length === 0) return 'NO';
+            stack.pop();
+          }
+        }
+        // stack이 비어있지 않으면 올바른 괄호가 아님
+        if (stack.length > 0) {
+          answer = 'NO';
+        }
+        return answer;
+      }
+      let a = '(()(())))';
+      console.log(solution(a));
+    </script>
+  </body>
+</html>
