@@ -1,0 +1,30 @@
+<!-- [210913](2) 올바른 괄호 -->
+<!-- 스택에 괄호를 push 하다가 ')' 닫는 괄호를 만나면 pop하기 -->
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>출력결과</title>
+  </head>
+  <body>
+    <script>
+      function solution(s) {
+        let answer = 'YES';
+        let stack = [];
+        for (let x of s) {
+          if (x === '(') {
+            stack.push(x);
+          } else if (x === ')') {
+            if (stack.length === 0) return 'NO';
+            stack.pop();
+          }
+        }
+        if (stack.length !== 0) {
+          return 'NO';
+        }
+        return answer;
+      }
+      let a = '(()(())))';
+      console.log(solution(a));
+    </script>
+  </body>
+</html>
