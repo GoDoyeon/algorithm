@@ -1,3 +1,5 @@
+<!-- [210918] 대문자 찾기 -->
+<!-- toUpperCase() 사용 -->
 <html>
   <head>
     <meta charset="UTF-8" />
@@ -10,12 +12,10 @@
         for (let x of s) {
           if (x === x.toUpperCase()) {
             answer++;
-            console.log(x);
           }
         }
         return answer;
       }
-
       let str = 'KoreaTimeGood';
       console.log(solution(str));
     </script>
